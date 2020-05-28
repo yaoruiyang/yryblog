@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.69.0" />
+
+
+<title>Hello R Markdown - A Hugo website</title>
+<meta property="og:title" content="Hello R Markdown - A Hugo website">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/yao.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="https://gitee.com/yaoruiyang">Gitee</a></li>
+    
+    <li><a href="https://github.com/yaoruiyang">Github</a></li>
+    
+    <li><a href="/about/">关于我</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">Hello R Markdown</h1>
+
+    
+    <span class="article-date">2015-07-23</span>
+    
+
+    <div class="article-content">
+      
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/viz/viz.js"></script>
+<link href="/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/grViz-binding/grViz.js"></script>
+
+
+<div id="r-markdown" class="section level1">
+<h1>R Markdown</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932</code></pre>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Type
+</th>
+<th style="text-align:left;">
+Math
+</th>
+<th style="text-align:left;">
+English
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Tom
+</td>
+<td style="text-align:left;">
+90
+</td>
+<td style="text-align:left;">
+89
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mary
+</td>
+<td style="text-align:left;">
+60
+</td>
+<td style="text-align:left;">
+100
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Type
+</th>
+<th style="text-align:left;">
+Introduction
+</th>
+<th style="text-align:left;">
+Evaluation
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+“5W”模式
+</td>
+<td style="text-align:left;">
+将传播活动解释为由传播者、传播内容、传播渠道、传播对象和传播效果五个环节和要素构成
+</td>
+<td style="text-align:left;">
+“5W”模式概括性强，但它忽略“反馈”传播因素，有局限性
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+香农-韦弗模式
+</td>
+<td style="text-align:left;">
+将人际传播过程看作单向的机械系统,模式中的“噪音”表明了传播过程的复杂性
+</td>
+<td style="text-align:left;">
+噪音”不仅仅限于“渠道”，有局限性
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+两级传播模式
+</td>
+<td style="text-align:left;">
+综合了大众传播和人际传播,强调“舆论领袖”的作用
+</td>
+<td style="text-align:left;">
+夸大了“舆论领袖”的作用及其对大众传播媒介的依赖性，把传播过程简单化了
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+施拉姆模式
+</td>
+<td style="text-align:left;">
+强调传者和受传者的同一性及其处理信息的过程，揭示了符号互动在传播中的作用
+</td>
+<td style="text-align:left;">
+/
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+德弗勒模式
+</td>
+<td style="text-align:left;">
+在闭路循环传播系统中，受传者既是信息的接收者，也是信息的传送者，噪音可以出现于传播过程中的各个环节
+</td>
+<td style="text-align:left;">
+此模式突出双向性，被认为是描绘大众传播过程的一个比较完整的模式
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+韦斯特利-麦克莱恩式
+</td>
+<td style="text-align:left;">
+此模式在突出信息的同时,特别强调把关人在大众传播中的作用
+</td>
+<td style="text-align:left;">
+/
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+波纹中心模式
+</td>
+<td style="text-align:left;">
+强调大众传播同社会、文化等的关系，显示了传播过程的复杂性和动态性
+</td>
+<td style="text-align:left;">
+/
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+一致性模式
+</td>
+<td style="text-align:left;">
+传播效果往往取决于传播内容对受传者固有信仰、观点、态度的威胁或强化程度
+</td>
+<td style="text-align:left;">
+/
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="including-plots" class="section level1">
+<h1>Including Plots</h1>
+<p><div id="htmlwidget-1" style="width:600px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\n\ndigraph RmarkDown {\ngraph [rankdir = LR]\nnode [shape=rectangle\n  style=filled\n  color=orange\n  fillcolor=salmon\n  fontcolor=white\n  arrowcolor=red\n  alpha=55\n  fontname = \"微软雅黑\"]\nedge [color = grey]\n\"想法\" -> \"收集\"\n\"收集\" -> \"整理\"\n\"整理\" -> \"导出\"\n    }\n    ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
+<pre class="r"><code>par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
+  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
+  init.angle = -50, border = NA
+)</code></pre>
+<div class="figure"><span id="fig:pie"></span>
+<img src="/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
+<p class="caption">
+Figure 1: A fancy pie chart.
+</p>
+</div>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+
