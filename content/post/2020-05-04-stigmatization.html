@@ -1,0 +1,211 @@
+---
+title: 污名化
+author: Ruiyang Yao
+date: '2020-05-04'
+slug: stigmatization
+categories:
+  - R
+tags:
+  - R Markdown
+output: 
+  html_document: 
+    theme: cerulean
+    toc: yes
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/viz/viz.js"></script>
+<link href="/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/grViz-binding/grViz.js"></script>
+
+
+<blockquote>
+<p>污名化是一个群体将<strong>贬低化标签</strong>强加在另一个群体之上并加以维持的动态过程，它是将<strong>群体</strong>的<strong>偏向负面的特征刻板印象化</strong>，并由此掩盖其他特征，成为在本质意义上与群体特征对应的指标物。蒙受污名者通常会遭受到人际排斥，他们逐渐丧失社会地位和信誉，丧失自尊心、自信心，凝滞在弱势状态，极难向上一阶层流动。</p>
+</blockquote>
+<div id="污名化概念的完善" class="section level1">
+<h1>1.污名化概念的完善</h1>
+<div id="htmlwidget-1" style="width:300px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\n\ndigraph RmarkDown {\ngraph [rankdir = TB]\nnode [shape=rectangle\n  style=filled\n  color=red\n  fillcolor=orange\n  fontcolor=white\n  arrowcolor=red\n  alpha=65\n  fontname = \"楷体\"]\nedge [color = grey]\n\"①来源于古希腊\" -> \"②Goffman将污名引入到心理学的研究领域\"\n\"②Goffman将污名引入到心理学的研究领域\" -> \"③Kurzban等从进化论视角提出另一个定义\"\n\"③Kurzban等从进化论视角提出另一个定义\" -> \"④Link等人重新定义污名的概念\"\n     }\n    ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="最早来源于古希腊" class="section level2">
+<h2>最早<strong>来源</strong>于古希腊</h2>
+<p>  <strong>含义</strong>：<br />
+  是一种<strong>身体标记</strong>。这种标记是刻在或烙在某些人身上，表示带有这种标记的人<strong>不受欢迎</strong>，需要回避和远离。</p>
+</div>
+<div id="goffman将污名引入到心理学的研究领域" class="section level2">
+<h2>Goffman将污名引入到<strong>心理学</strong>的研究领域</h2>
+<p>  <strong>观点</strong>：<br />
+  将污名<strong>定义</strong>为个体的一种不被信任和不受欢迎的特征，这种特征降低了个体在社会中的地位，使他从一个完美的、有用的个体变成了一个有污点和丧失了部分价值的人，是社会对某些个体或群体贬低性、侮辱性的标签。</p>
+</div>
+<div id="kurzban等从进化论视角提出另一个定义" class="section level2">
+<h2>Kurzban等从<strong>进化论</strong>视角提出另一个定义</h2>
+<p>  <strong>观点</strong>：<br />
+  为了避免潜在的缺陷伴随群体生存，人们已经<strong>进化了认知适应能力</strong>，允许他们将具有某些特定特征的人排斥到他们的群体之外，即污名化。</p>
+</div>
+<div id="link等人重新定义污名的概念" class="section level2">
+<h2>Link等人<strong>重新定义</strong>污名的概念</h2>
+<ul>
+<li><strong>观点</strong>:
+<ul>
+<li><strong>污名化存在条件</strong>：
+<ul>
+<li><input type="checkbox" disabled="" />
+人们区分并标签人类的<span class="math inline">\(\color{red}{差异}\)</span></li>
+<li><input type="checkbox" disabled="" />
+主流群体为了在一定程度上把“我们”从“他们”中分离出来, <span class="math inline">\(\color{red}{将被标签的人置于独特的类别中}\)</span></li>
+<li><input type="checkbox" disabled="" />
+被标签的人经历着<span class="math inline">\(\color{red}{不公平的处境}\)</span>, 丧失了地位和遭到了歧视</li>
+<li><input type="checkbox" disabled="" />
+只有一个群体有<span class="math inline">\(\color{red}{足够的影响力}\)</span>来左右公众对另一个群体态度的时候, 污名才会存在</li>
+</ul></li>
+</ul></li>
+<li><strong>定义</strong>：<br />
+  是指在一个允许污名各种成分显露的社会情景中, <strong>贴标签,刻板印象,地位丧失</strong>,和<strong>歧视</strong>同时发生的情况。</li>
+</ul>
+</div>
+</div>
+<div id="污名化的典型现象" class="section level1">
+<h1>2.污名化的典型现象</h1>
+<ul>
+<li>疾病污名——<span class="math inline">\(\color{grey}{例：艾滋病}\)</span></li>
+<li>身份污名——<span class="math inline">\(\color{grey}{例：农民工}\)</span></li>
+<li>性别污名——<span class="math inline">\(\color{grey}{例：女博士、女司机}\)</span></li>
+<li>职业污名——<span class="math inline">\(\color{grey}{例：公关、保洁}\)</span></li>
+<li>种族和地域污名——<span class="math inline">\(\color{grey}{例：河南人、黑人}\)</span></li>
+</ul>
+</div>
+<div id="污名化的作用形式" class="section level1">
+<h1>3.污名化的作用形式</h1>
+<div id="公众污名" class="section level2">
+<h2>公众污名</h2>
+<p>  <span class="math inline">\(\color{red}{一个群体}\)</span>将贬低化标签强加在<span class="math inline">\(\color{red}{另一个群体}\)</span>之上并加以维持的动态过程。</p>
+</div>
+<div id="自我污名" class="section level2">
+<h2>自我污名</h2>
+<p>   某一群体或个体在遭受公众污名贬损之后,在<span class="math inline">\(\color{red}{主观上}\)</span>产生的自卑感、自羞感和自责感。被污名群体或个体会因此遭受社会排斥,出现意志消沉、相互敌视、自尊贬损等情绪极化现象。</p>
+</div>
+<div id="媒介污名" class="section level2">
+<h2>媒介污名</h2>
+<p>  媒介污名通过<span class="math inline">\(\color{red}{报道或传播}\)</span>某一特定群体、事物的<span class="math inline">\(\color{red}{负面信息}\)</span>实施污名,能够有效改变社会公众对其原有的印象，尤其是网络媒介社会化和自媒体化的技术变革放大了污名效果。</p>
+</div>
+</div>
+<div id="污名化的发展过程" class="section level1">
+<h1>4.污名化的发展过程</h1>
+<div id="从特殊污名到一般污名" class="section level2">
+<h2>从特殊污名到一般污名</h2>
+<ul>
+<li><p>从<strong>受污者的数量</strong>看<br />
+  <strong>传统污名</strong>主要是针对数量有限的<em>特殊人群</em>的种族污名、疾病污名。<br />
+  <strong>泛污名化</strong>则除了针对这些特殊群体之外,还存在更大范围、更<em>一般群体</em>的普遍污名。</p></li>
+<li><p>从<strong>污名的内容</strong>看<br />
+  <strong>传统污名</strong>主要关注受污者的<em>某一具体特质</em>(如残疾、疾病) 或社会心理现象。<br />
+  <strong>泛污名化</strong>则扩展到社会成员<em>众多方面的特质</em>,如认知、情感、行为表现、选择偏好、社会生活等,形成了身份污名、性别污名等。</p></li>
+<li><p>从<strong>污名的类型</strong>看<br />
+  <strong>传统污名</strong>主要是<em>个体</em>污名或某一群体中的<em>一些个体或成员</em>的污名。<br />
+  <strong>泛污名化</strong>则从个体扩展到其所在的<em>组织乃至职业</em>, 形成组织污名、职业污名。</p></li>
+</ul>
+</div>
+<div id="从单向污名到交错污名" class="section level2">
+<h2>从单向污名到交错污名</h2>
+<p>  <strong>传统污名</strong>更多的是社会强势群体、主流群体对非强势群体、非主流群体的贬损和侮辱,呈现出<em>单向度、一元化</em>的污名关系。<br />
+  <strong>泛污名化</strong>则不仅包括社会强势群体、主流群体对非强势群体、非主流群体的贬损和侮辱,也包括非强势群体、非主流群体对强势群体和主流群体的嘲弄与讽刺。</p>
+</div>
+<div id="从外显污名到内隐污名" class="section level2">
+<h2>从外显污名到内隐污名</h2>
+<p>  <strong>传统污名</strong>主要针对的是受污者的身体、精神方面的疾病或其他较为明显的<em>表面特质</em>而产生的外显污名。<br />
+  <strong>泛污名化</strong>则在此基础上,主要针对社会成员较为<em>内在的言语、知识、行为、职业、阶层</em>等隐匿性特质。</p>
+</div>
+<div id="常态污名与突发污名并存" class="section level2">
+<h2>常态污名与突发污名并存</h2>
+<p>  <strong>传统污名</strong>主要是以<em>常态污名</em>为主,即污名的对象主要是长时期内一直受到社会普遍污名的现象,如疾病污名(艾滋病)等。<br />
+  <strong>泛污名化</strong>情况下，一些<em>突发事件</em>也可能导致个人或组织的污名化,使得最初对于突发事件的污名逐渐延伸到对与之相关的人、群体、组织、机构、制度的污名。<span class="math inline">\(\color{grey}{如}\)</span>“三聚氰胺”事件引发民众对所有国产奶粉企业甚至整个食品行业的不信任等。</p>
+</div>
+<div id="公众污名与自我污名分离" class="section level2">
+<h2>公众污名与自我污名分离</h2>
+<p>  在<strong>传统污名</strong>中,社会大众在对某一个体或群体进行污名贬损和“贴标签”的同时,受污者自身对污名特质产生自卑、羞愧和耻辱,对公众污名产生一种强烈的主观感应。<br />
+  在<strong>泛污名化过程</strong>中,部分污名者依然会受到公众污名的影响,产生“自我低评价”和“自我低效能”的自我污名,但也出现了部分污名者自我贬低的消极知觉<em>逐渐淡化</em>的趋势。</p>
+</div>
+</div>
+<div id="污名化的影响" class="section level1">
+<h1>5.污名化的影响</h1>
+<blockquote>
+<p>由于不同的文化背景下主流群体对劣势群体有着不同的影响, 污名其他群体的目的不同;不同的污名群体都有自己的独特特点, 主流群体与各污名群体发生作用的规律各不相同,污名各个劣势群体的方式和途径也存在着很大的差异。<strong>因此不同情况下的污名化造成的影响虽有重合的部分，但侧重点仍有所不同。</strong></p>
+</blockquote>
+<p>以下就<span class="math inline">\(\color{orange}{一般产生的普遍影响}\)</span>和<span class="math inline">\(\color{orange}{具体案例}\)</span>的不同影响进行分析：</p>
+<div id="普遍影响" class="section level2">
+<h2>普遍影响</h2>
+<ul>
+<li><strong>破坏社会秩序</strong>
+<ul>
+<li><p><strong>加剧不同群体间的矛盾冲突</strong><br />
+  由于污名化现象是社会主流舆论对于特定群体的贴标签行为，污名化现象就很<strong>容易引发相关群体之间的对立情绪</strong>,导致矛盾发生。<span class="math inline">\(\color{grey}{如}\)</span>医生群体与患者群体的医患矛盾、城管与小贩群体间的暴力冲突等。</p></li>
+<li><p><strong>巩固社会刻板成见</strong><br />
+  当人们对一个群体有了消极认知,<strong>负面印象很难得到消除并极容易被加深</strong>，因此刻板成见和污名化现象的发生会形成恶性循环。</p></li>
+<li><p><strong>促使道德绑架等其他问题发生</strong><br />
+  污名化会引发更多不良效应，<strong>形成错误舆论</strong>，导致发生舆论大反转。不少事件的网络讨论中,一些网民习惯于不谴责加害者,而是对受害方进行污名化。<span class="math inline">\(\color{grey}{如}\)</span>被家暴“一定是其出轨在先”,被打者“一定是他先挑衅”等,并以此来讨伐受害人,在言语上对其进行二次伤害。</p></li>
+<li><p><strong>导致社会关系的失衡</strong><br />
+  污名化现象的影响对社会有着<strong>长远</strong>的消极作用。<span class="math inline">\(\color{grey}{如}\)</span>社会对于医生的污名化,暴力伤医频发,高考生报考医学专业的人数逐年下滑。其中工作辛苦、待遇差、专业要求高的儿科医生流失更为迅速,儿科医疗资源已显现出极度不足,婴幼儿患病和死亡率有所上升。</p></li>
+</ul></li>
+<li><strong>对被污名化者产生消极影响</strong>
+<ul>
+<li><p><strong>损害被污名化者的形象</strong><br />
+  污名化对于被污名化者的形象毁坏是极为严重的，<span class="math inline">\(\color{grey}{如}\)</span>一个企业或者品牌遭受污名化，对于其自身的形象建设是不利的，会导致大众在心中形成一个歪曲不实的不良印象，从而引发多方面的消极影响。</p></li>
+<li><p><strong>导致群体被排斥和边缘化</strong><br />
+  污名化的<strong>最直接</strong>作用就是使污名群体受到社会其他成员的歧视、排斥,包括对群体成员的不公正对待,<span class="math inline">\(\color{grey}{如}\)</span>白人歧视黑人。降低群体成员的社会地位,使该群体被边缘化,被孤立,远离社会主流。<em>伴随着群体被孤立和排斥,群体的话语权和在公众视野中出现的机会也随之减少,使得群体失去被更多人了解、被公众正确认识的机会。</em></p></li>
+<li><p><strong>加剧被污名化者消极情绪</strong><br />
+  相较社会其他群体,被污名化群体受到的影响最大。群体成员可能会隐藏自己的群体属性,对自身的认知出现偏差,群体消极情绪增大,减少群体认同感等。</p></li>
+</ul></li>
+<li><strong>对媒体产生消极影响</strong>
+<ul>
+<li><strong>减少媒体公信力</strong><br />
+  很多对群体污名化的理由中,存在着失实、夸张的成分,这些报道的存在会消磨媒体的公信力,使大众很难再相信媒体的言论，这无疑会使媒体陷入被动,更难行使自身话语权和舆论引导职责。<strong>短时间内造成舆论引导的滞后和困难,长此以往,还会使媒体的社会作用难以发挥</strong>。</li>
+<li><strong>媒体本身也被污名化</strong><br />
+  媒体对于其他群体的污名化,通常会遭到群体成员的驳斥和反抗。指责媒体恶意炒作、报道不实等,这些都加剧了传媒群体和被污名群体的矛盾。媒体本身也会被社会舆论贴上负面标签,成为被污名的对象。</li>
+</ul></li>
+</ul>
+</div>
+<div id="针对具体案例分析" class="section level2">
+<h2>针对具体案例分析</h2>
+<ul>
+<li><strong>艾滋病污名化</strong></li>
+</ul>
+<blockquote>
+<p>艾滋病从发现以来就被被认为是极其罪恶的疾病，而只有身负罪恶的人才会得。即使是现在，每每谈起总是让人联想到“肮脏不堪”的行为。</p>
+</blockquote>
+<p>  <strong>影响</strong>
+<div id="htmlwidget-2" style="width:800px;height:480px;" class="grViz html-widget"></div>
+    <script type="application/json" data-for="htmlwidget-2">{"x":{"diagram":"\n\ndigraph RmarkDown {\ngraph [rankdir = LR]\nnode [shape=rectangle\n  style=filled\n  color=white\n  fillcolor=white\n  fontcolor=black\n  arrowcolor=red\n  alpha=65\n  fontname = \"楷体\"]\nedge [color = grey]\n\"影响\" -> \"对患者的影响\"\n\"影响\" -> \"对患者家属的影响\"\n\"对患者的影响\" -> \"降低患者自尊\"\n\"对患者的影响\" -> \"不愿暴露病情，拒绝求医和接受治疗\"\n\"对患者的影响\" -> \"已经暴露病情的患者生活上陷入巨大的困境\"\n\"已经暴露病情的患者生活上陷入巨大的困境\"->\"失去工作或不被雇佣\"\n\"已经暴露病情的患者生活上陷入巨大的困境\"->\"被亲友所疏远或孤立\"\n\"已经暴露病情的患者生活上陷入巨大的困境\"->\"租不到房子\"\n\"对患者家属的影响\" -> \"影响到家庭的脸面, 使整个家庭的社会交往圈变小\"\n\"对患者家属的影响\" -> \"影响家庭成员间的和睦甚至导致家庭的破裂\"\n }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script></p>
+<ul>
+<li><strong>专家污名化</strong></li>
+</ul>
+<blockquote>
+<p>近几年中国民众对专家的质疑越来越多,嘲讽专家的现象也屡见不鲜,一些网民甚至以“砖家”和“叫兽”等词汇来嘲讽专家群体, 将“专家”污名化。</p>
+</blockquote>
+<p>  <strong>影响</strong>
+<div id="htmlwidget-3" style="width:800px;height:480px;" class="grViz html-widget"></div>
+    <script type="application/json" data-for="htmlwidget-3">{"x":{"diagram":"\n\ndigraph RmarkDown {\ngraph [rankdir = TB]\nnode [shape=rectangle\n  style=filled\n  color=white\n  fillcolor=white\n  fontcolor=black\n  arrowcolor=red\n  alpha=65\n  fontname = \"楷体\"]\nedge [color = grey]\n\"影响\" -> \"民众对专家产生质疑乃至信任危机\"\n\"影响\" -> \"误导社会舆论, 激化社会矛盾\"\n\"影响\" -> \"造成专家与民众的对立\"\n\"误导社会舆论, 激化社会矛盾\" -> \"引发社会秩序失范\"\n\"造成专家与民众的对立\" -> \"不利于民众科学素养的提高\"\n\"不利于民众科学素养的提高\" -> \"阻碍社会发展进步\"\n }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script></p>
+<ul>
+<li><strong>“中国病毒”</strong></li>
+</ul>
+<blockquote>
+<p>美国总统特朗普称新冠病毒为“中国病毒”，试图污名化中国。</p>
+</blockquote>
+<p>  <strong>影响</strong>
+<div id="htmlwidget-4" style="width:600px;height:480px;" class="grViz html-widget"></div>
+    <script type="application/json" data-for="htmlwidget-4">{"x":{"diagram":"\n\ndigraph RmarkDown {\ngraph [rankdir = TB]\nnode [shape=rectangle\n  style=filled\n  color=white\n  fillcolor=white\n  fontcolor=black\n  arrowcolor=red\n  alpha=65\n  fontname = \"楷体\"]\nedge [color = grey]\n\"影响\" -> \"将科学问题政治化\"\n\"影响\" -> \"助长美国国内的种族仇视情绪\"\n\"将科学问题政治化\" -> \"抹黑和打压中国\"\n\"助长美国国内的种族仇视情绪\" -> \"华侨在国外可能受到歧视\"\n }\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script></p>
+</div>
+</div>
+<div id="关于去污名化的思考" class="section level1">
+<h1>6.关于去污名化的思考</h1>
+<div id="每个人或群体都需要对自己传播的信息负责" class="section level2">
+<h2>每个人或群体都需要对自己传播的信息负责</h2>
+<p>  要避免先入为主，要尽量避免将带有个人色彩的观点带入传播活动中，<span class="math inline">\(\color{red}{坚持客观真实原则}\)</span>。在网络污名化风向中不应随波逐流，拥有自己的思考。</p>
+</div>
+<div id="给予一些已经被污名化的个人或群体话语权" class="section level2">
+<h2>给予一些已经被污名化的个人或群体话语权</h2>
+<p>  当一个人或一个群体遭受污名化时，人们往往带着固化思维来评论和看待发生事件。如果被污名化者可以得到话语权，为自己发声，他们将有机会<span class="math inline">\(\color{red}{为自己正名}\)</span>，改变人们的固有印象。</p>
+</div>
+<div id="作为信息接收者的人们也应该提高自身辨别是非的能力" class="section level2">
+<h2>作为信息接收者的人们也应该提高自身辨别是非的能力</h2>
+<p>  自主地形成正确的、稳固的社会认知，不要轻易因为媒体的污名化报道而改变自我认知和价值体系。同时，在知晓热点事件后，大众要<span class="math inline">\(\color{red}{冷静公正地看待}\)</span>事件，合理地审视事件所谓的“真相”。</p>
+</div>
+</div>

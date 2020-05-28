@@ -1,0 +1,85 @@
+---
+title: R的进阶运用
+author: Ruiyang Yao
+date: '2020-05-03'
+slug: r-advanced
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+# 1.R疫情数据获取与绘图
++ **重点**在于学习使用`ggplot`制图
++ 相关代码
+```r
+library(nCov2019) 
+library(treemapify) # 制图方法,  矩形树图
+library(treemap)   # 制图方法
+library(dplyr)# 数据整理
+library(ggplot2)
+#调用包，注意在使用前要用install.packages()安装
+x<- get_nCov2019()
+d<- x['湖北',]
+#赋值
+ggplot(economics, aes(date, unemploy)) +
+  geom_line(colour = "red")
+#画一个历年失业人数的折线图
+ggplot(data = d, mapping = aes(x = name, y = log10(confirm))) +
+    geom_point()
+#画一个武汉各地确诊人数的点图
+ggplot(d, aes(area = dead, fill = name, label = paste(name, dead, sep = "\n"))) +
+  geom_treemap() +
+  geom_treemap_text(fontface = "italic", colour = "white", place = "centre",grow = TRUE)
+#画一个武汉各地死亡人数的矩形树图
+```
+
+# 2.用R获取地理数据并画地图
++ **数据来源**：[国家边界数据下载](http://datav.aliyun.com/tools/atlas/#&lat=34.994003757575776&lng=97.0751953125&zoom=4)
++ **重点**是学习使用`rjson`调用数据，并用`ggplot`制图
++ 相关代码
+```r
+library(rjson)
+require(rjson)
+rjson::fromJSON(file=url)
+#调用包，引用数据
+toJSON<-rjson::toJSON(json)
+#赋值，使导出规范化
+write(toJSON,"cn10000.json")
+#保存/下载
+cn10000<-rjson::fromJSON(file="cn10000.json")
+cn<-si::st-read(dsn="cn10000.json",stringASEactors=F)
+#本地读取数据
+p<-ggplot()+                                            
+    geom-sf(data=cn.aes(fill=name))+ 
+    theme-bw()
+#制图
+```
+# 3.用R创建网站
++ $\color{red}{如果没有安装hugo}$，在创建project时需要**勾选下载**。
++ **重点**是掌握`blogdown::new_post()`和`blogdown::serve_site()`的运用
++ 创建网站的简单流程
+```{R, echo=FALSE}
+DiagrammeR::grViz("
+
+digraph RmarkDown {
+graph [rankdir = LR]
+node [shape=rectangle
+  style=filled
+  color=violet
+  fillcolor=black
+  fontcolor=white
+  arrowcolor=red
+  alpha=65
+  fontname = '楷体']
+edge [color = grey]
+'创建一个新Project' -> '修改原来模板上已有的内容'
+'创建一个新Project' -> '用blogdown::new_post创建新内容'
+'修改原来模板上已有的内容' -> '保存'
+'用blogdown::new_post创建新内容' -> '保存'
+'保存' -> '用blogdown::serve_site查看网页'
+    }
+    ", width=900)
+```
+
+ 

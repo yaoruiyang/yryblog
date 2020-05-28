@@ -1,0 +1,76 @@
+---
+title: R的进阶运用
+author: Ruiyang Yao
+date: '2020-05-03'
+slug: r-advanced
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/viz/viz.js"></script>
+<link href="/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/grViz-binding/grViz.js"></script>
+
+
+<div id="r疫情数据获取与绘图" class="section level1">
+<h1>1.R疫情数据获取与绘图</h1>
+<ul>
+<li><strong>重点</strong>在于学习使用<code>ggplot</code>制图</li>
+<li>相关代码</li>
+</ul>
+<pre class="r"><code>library(nCov2019) 
+library(treemapify) # 制图方法,  矩形树图
+library(treemap)   # 制图方法
+library(dplyr)# 数据整理
+library(ggplot2)
+#调用包，注意在使用前要用install.packages()安装
+x&lt;- get_nCov2019()
+d&lt;- x[&#39;湖北&#39;,]
+#赋值
+ggplot(economics, aes(date, unemploy)) +
+  geom_line(colour = &quot;red&quot;)
+#画一个历年失业人数的折线图
+ggplot(data = d, mapping = aes(x = name, y = log10(confirm))) +
+    geom_point()
+#画一个武汉各地确诊人数的点图
+ggplot(d, aes(area = dead, fill = name, label = paste(name, dead, sep = &quot;\n&quot;))) +
+  geom_treemap() +
+  geom_treemap_text(fontface = &quot;italic&quot;, colour = &quot;white&quot;, place = &quot;centre&quot;,grow = TRUE)
+#画一个武汉各地死亡人数的矩形树图</code></pre>
+</div>
+<div id="用r获取地理数据并画地图" class="section level1">
+<h1>2.用R获取地理数据并画地图</h1>
+<ul>
+<li><strong>数据来源</strong>：<a href="http://datav.aliyun.com/tools/atlas/#&amp;lat=34.994003757575776&amp;lng=97.0751953125&amp;zoom=4">国家边界数据下载</a></li>
+<li><strong>重点</strong>是学习使用<code>rjson</code>调用数据，并用<code>ggplot</code>制图</li>
+<li>相关代码</li>
+</ul>
+<pre class="r"><code>library(rjson)
+require(rjson)
+rjson::fromJSON(file=url)
+#调用包，引用数据
+toJSON&lt;-rjson::toJSON(json)
+#赋值，使导出规范化
+write(toJSON,&quot;cn10000.json&quot;)
+#保存/下载
+cn10000&lt;-rjson::fromJSON(file=&quot;cn10000.json&quot;)
+cn&lt;-si::st-read(dsn=&quot;cn10000.json&quot;,stringASEactors=F)
+#本地读取数据
+p&lt;-ggplot()+                                            
+    geom-sf(data=cn.aes(fill=name))+ 
+    theme-bw()
+#制图</code></pre>
+</div>
+<div id="用r创建网站" class="section level1">
+<h1>3.用R创建网站</h1>
+<ul>
+<li><span class="math inline">\(\color{red}{如果没有安装hugo}\)</span>，在创建project时需要<strong>勾选下载</strong>。</li>
+<li><strong>重点</strong>是掌握<code>blogdown::new_post()</code>和<code>blogdown::serve_site()</code>的运用</li>
+<li>创建网站的简单流程
+<div id="htmlwidget-1" style="width:900px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\n\ndigraph RmarkDown {\ngraph [rankdir = LR]\nnode [shape=rectangle\n  style=filled\n  color=violet\n  fillcolor=black\n  fontcolor=white\n  arrowcolor=red\n  alpha=65\n  fontname = \"楷体\"]\nedge [color = grey]\n\"创建一个新Project\" -> \"修改原来模板上已有的内容\"\n\"创建一个新Project\" -> \"用blogdown::new_post创建新内容\"\n\"修改原来模板上已有的内容\" -> \"保存\"\n\"用blogdown::new_post创建新内容\" -> \"保存\"\n\"保存\" -> \"用blogdown::serve_site查看网页\"\n    }\n    ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script></li>
+</ul>
+</div>
